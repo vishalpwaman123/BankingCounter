@@ -26,7 +26,7 @@ namespace BankingCastCounter
             
             while (true)
             {
-                Console.WriteLine("Enter your Choice: \n 1.Cash Deposite \n 2.Cash Withdrawal");
+                Console.WriteLine("Enter your Choice: \n 1.Cash Deposite \n 2.Cash Withdrawal \n 3.Display \n 4.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -37,12 +37,15 @@ namespace BankingCastCounter
                         BankManipulation.WithDrawCash(linkedList);
                         break;
                     case 3:
+                        linkedList.displayRecord();
+                        break;
+                    case 4:
                         return;
                     default:
                         Console.WriteLine("Please Enter Valid Choice");
                         break;
                 }
-                linkedList.displayRecord();
+                
             }
         }
     }
