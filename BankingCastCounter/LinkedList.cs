@@ -92,10 +92,6 @@ namespace BankingCastCounter
             {
                 if (firstPos.name == Name)
                 {
-                    if (head == firstPos)
-                    {
-                        head = head.next;
-                    }
                     return 1;
                 }
               firstPos = firstPos.next;
