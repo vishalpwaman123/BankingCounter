@@ -10,7 +10,7 @@ namespace BankingCastCounter
             LinkedList linkedList = new LinkedList();
             linkedList.insertData("Vishal Wamankar", 27500);
             linkedList.insertData("Ravi Vaishanav", 3600);
-            Console.WriteLine(linkedList.isEmpty());
+            linkedList.displayRecord();
         }
     }
 }

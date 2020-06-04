@@ -62,6 +62,16 @@ namespace BankingCastCounter
             }
             return head;
         }
+
+        public void displayRecord()
+        {
+            Node LeastPosition = head;
+            while (LeastPosition != null)
+            {
+                Console.WriteLine("Name:" + LeastPosition.name + "\t" + "Account Balance:" + LeastPosition.cash);
+                LeastPosition = LeastPosition.next;
+            }
+        }
     }
 
 }
