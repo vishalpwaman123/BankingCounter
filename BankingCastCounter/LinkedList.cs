@@ -13,10 +13,10 @@ namespace BankingCastCounter
         public class Node
         {
             public String name;
-            public double cash;
+            public int cash;
             public Node next;
 
-            public Node(string name, double cash)
+            public Node(string name, int cash)
             {
                 this.name = name;
                 this.cash = cash;
@@ -37,7 +37,7 @@ namespace BankingCastCounter
             }
         }
 
-        public Node insertData(string name, double cash)
+        public Node RecordInsertion(string name, int cash)
         {
             if (name !=null && cash != 0.0 && name !=" ")
             {
@@ -98,6 +98,72 @@ namespace BankingCastCounter
             }
             return 0;
         }
+
+        public int CustomerFound(string name)
+        {
+            Node firstPosition = head;
+            if (head != null)
+            {
+                while (firstPosition != null)
+                {
+                    if (firstPosition.name == name)
+                        return 1;
+                    firstPosition = firstPosition.next;
+                }
+            }
+            return 0;
+        }
+
+        public int BalanceDepositionUpdation(string name, int amount)
+        {
+            Node firstPosition = head;
+            if (head != null)
+            {
+                while (firstPosition != null)
+                {
+                    if (firstPosition.name == name)
+                    {
+                        if ((firstPosition.cash + amount) >= firstPosition.cash)
+                        {
+                            firstPosition.cash = firstPosition.cash + amount;
+                            break;
+                        }
+                        else
+                        {
+                            return 0;
+                        }
+                    }
+                    firstPosition = firstPosition.next;
+                }
+            }
+            return firstPosition.cash;
+        }
+
+        public int BalanceUpdationWithdraw(string name, int amount)
+        {
+            Node firstPosition = head;
+            if (head != null)
+            {
+                while (firstPosition != null)
+                {
+                    if (firstPosition.name == name)
+                    {
+                        if ((firstPosition.cash - amount) >= 0)
+                        {
+                            firstPosition.cash = firstPosition.cash - amount;
+                            break;
+                        }
+                        else
+                        {
+                            return 0;
+                        }
+                    }
+                    firstPosition = firstPosition.next;
+                }
+            }
+            return firstPosition.cash;
+        }
+
     }
 
 }
