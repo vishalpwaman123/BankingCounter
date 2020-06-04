@@ -11,10 +11,21 @@ namespace BankingCastCounter
             linkedList.insertData("Vishal Wamankar", 27500);
             linkedList.insertData("Ravi Vaishanav", 3600);
             linkedList.displayRecord();
-            linkedList.removeFront();
+            //linkedList.removeFront();
             Console.WriteLine("Node Empty Status :"+linkedList.isEmpty());
             Console.WriteLine("\n");
 
+            linkedList.displayRecord();
+
+            int status = linkedList.RemoveNote("Vishal Wamankar");
+            if(status==1)
+            {
+                Console.WriteLine("Data Deleted");
+            }
+            else
+            {
+                Console.WriteLine("Data Not Found");
+            }
             linkedList.displayRecord();
         }
     }

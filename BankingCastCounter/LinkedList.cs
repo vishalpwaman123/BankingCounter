@@ -74,12 +74,33 @@ namespace BankingCastCounter
         }
 
         //To remove front Node Data
-        public Node removeFront()
+        public void removeFront()
         {
             Node firstPos = head;
             head = head.next;
             firstPos.next = null;
-            return head;
+            
+        }
+
+        public int RemoveNote(string Name)
+        {
+            Node firstPos = head;
+            if (head == null)
+                return 0;
+
+            while (firstPos != null)
+            {
+                if (firstPos.name == Name)
+                {
+                    if (head == firstPos)
+                    {
+                        head = head.next;
+                    }
+                    return 1;
+                }
+              firstPos = firstPos.next;
+            }
+            return 0;
         }
     }
 
