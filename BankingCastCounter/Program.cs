@@ -6,7 +6,9 @@ namespace BankingCastCounter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome To Banking Cash Counter");
+            LinkedList linkedList = new LinkedList();
+            Console.WriteLine(linkedList.isEmpty());
         }
     }
 }
