@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6WkBShZS0n10pmJASmvOQKFkZJ8yDJY4wBMlbRevBzSV1vOSq2fAoWOacmGgbuNxqzUy5IQYqXFVYHBXFHdCIg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vishal\\source\\repos\\BankingCastCounter\\BankingCastCounter\\BankingCastCounter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vishal\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
