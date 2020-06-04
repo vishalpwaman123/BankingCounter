@@ -8,38 +8,25 @@ namespace BankingCastCounter
         {
             
             LinkedList linkedList = new LinkedList();
-            linkedList.RecordInsertion("Vishal Wamankar", 60000);
-            linkedList.RecordInsertion("Rahul Wamankar", 5000);
-            linkedList.RecordInsertion("Ravi Vaishanav", 45000);
-            linkedList.RecordInsertion("Mahesh Bhosale", 1000);
-            linkedList.RecordInsertion("Akash Bhosale", 2000);
-            linkedList.RecordInsertion("Shubham Bhakte", 5000);
-            linkedList.RecordInsertion("Abhi Shinde", 3000);
-            linkedList.RecordInsertion("Shraddha choudhary", 2000);  
-            linkedList.RecordInsertion("priya ingale ", 3000);
-            linkedList.RecordInsertion("Sunny takatwala", 5000);
-            linkedList.RecordInsertion("Salman Chaiwala", 2000);
-            linkedList.RecordInsertion("shahrukh panwala", 2000);
-            linkedList.RecordInsertion("Amir Chole", 6000);
-            linkedList.displayRecord();
-
-            
             while (true)
             {
-                Console.WriteLine("Enter your Choice: \n 1.Cash Deposite \n 2.Cash Withdrawal \n 3.Display \n 4.Exit");
+                Console.WriteLine("Enter your Choice: \n 1.Create New Account \n 2.Cash Deposite \n 3.Cash Withdrawal \n 4.Display \n 5.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
                     case 1:
-                        BankManipulation.CashDeposition(linkedList);
+                        linkedList.createAccount();
                         break;
                     case 2:
-                        BankManipulation.WithDrawCash(linkedList);
+                        BankManipulation.CashDeposition(linkedList);
                         break;
                     case 3:
-                        linkedList.displayRecord();
+                        BankManipulation.WithDrawCash(linkedList);
                         break;
                     case 4:
+                        linkedList.displayRecord();
+                        break;
+                    case 5:
                         return;
                     default:
                         Console.WriteLine("Please Enter Valid Choice");

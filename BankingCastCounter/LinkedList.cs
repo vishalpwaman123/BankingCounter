@@ -36,6 +36,15 @@ namespace BankingCastCounter
                 return false;
             }
         }
+        public void createAccount()
+        {
+            Console.WriteLine("Enter Account Holder Name :");
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter Account Holder Initial Cash :");
+            int amount = Convert.ToInt32(Console.ReadLine());
+            RecordInsertion(name,amount);
+
+        }
 
         public Node RecordInsertion(string name, int cash)
         {
