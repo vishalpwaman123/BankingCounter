@@ -4,6 +4,7 @@ using System.Text;
 
 namespace BankingCastCounter
 {
+
     public class LinkedList
     {
         Node head;
@@ -15,20 +16,52 @@ namespace BankingCastCounter
             public double cash;
             public Node next;
 
-            public Node
-                 (string name, double cash)
+            public Node(string name, double cash)
             {
                 this.name = name;
                 this.cash = cash;
+                this.next = null;
             }
         }
 
-        //To check the LinkedList is Empty or Not
+        //check the LinkedList is Not Empty 
         public bool isEmpty()
         {
             if (head == null)
+            {
                 return true;
-            return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public Node insertData(string name, double cash)
+        {
+            if (name !=null && cash != 0.0 && name !=" ")
+            {
+                Node newNode = new Node(name, cash);
+                if (head == null)
+                {
+                    head = newNode;
+                }
+                else
+                {
+                    Node LeastPosition = head;
+                    while (LeastPosition.next != null)
+                    {
+                        LeastPosition = LeastPosition.next;
+                    }
+                    LeastPosition.next = newNode;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Data are Invalid and Please Enter Valid Data");
+            }
+            return head;
         }
     }
+
 }
