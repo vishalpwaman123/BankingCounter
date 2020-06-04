@@ -72,6 +72,15 @@ namespace BankingCastCounter
                 LeastPosition = LeastPosition.next;
             }
         }
+
+        //To remove front Node Data
+        public Node removeFront()
+        {
+            Node firstPos = head;
+            head = head.next;
+            firstPos.next = null;
+            return head;
+        }
     }
 
 }
