@@ -36,14 +36,15 @@ namespace BankingCastCounter
                 return false;
             }
         }
-        public void createAccount()
-        {
-            Console.WriteLine("Enter Account Holder Name :");
-            string name = Console.ReadLine();
-            Console.WriteLine("Enter Account Holder Initial Cash :");
-            int amount = Convert.ToInt32(Console.ReadLine());
-            RecordInsertion(name,amount);
 
+        
+        public void createAccount(string name)
+        {
+         
+                Console.WriteLine(name+"  Initial Cash :");
+                int amount = Convert.ToInt32(Console.ReadLine());
+                RecordInsertion(name, amount);
+         
         }
 
         public Node RecordInsertion(string name, int cash)
@@ -75,6 +76,11 @@ namespace BankingCastCounter
         public void displayRecord()
         {
             Node LeastPosition = head;
+            if (head==null)
+            {
+                Console.WriteLine("No Account Not Found");
+                return;
+            }
             while (LeastPosition != null)
             {
                 Console.WriteLine("Name:" + LeastPosition.name + "\t" + "Account Balance:" + LeastPosition.cash);
